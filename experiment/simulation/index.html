@@ -1,13 +1,83 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<!-- Add CSS at the head of HTML file -->
-    <link rel="stylesheet" href="./css/main.css">
-</head>
-<body>
-		<!-- Your code goes here-->
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lambda Functions</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- Add JS at the bottom of HTML file --> 
-        <script src="./js/main.js"></script>
-</body>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-one-quarter v-instruction-title">
+          Lambda Functions
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+      <div class="column is-4-desktop is-12-tablet is-12-mobile">
+        <div class="v-datalist-container">
+          <div class="v-datalist-title">Let's Learn Lambda Functions!</div>
+          <div class="v-datalist-row">
+            Lambda functions are small anonymous functions. A lambda function
+            can take any number of arguments, but can only have one expression.
+            They are used for simple tasks that can be done in a single line.
+            Their major use is inside map, filter and reduce functions which
+            take a callback function as an argument and defining a function and
+            naming it makes code more complicated.
+          </div>
+          <div class="v-datalist-row v-bold">
+            In this simulation, you are going to learn the use of lambda
+            functions and why they should be used over a normal function
+            definition.
+          </div>
+          <div class="v-datalist-row v-bold">
+            You are given a program which illustrates the use of a lambda
+            function. You are required to give it input and observe the output.
+          </div>
+        </div>
+      </div>
+      <div class="column is-4-desktop is-12-tablet is-12-mobile">
+        <div class="v-datalist-container">
+          <div class="v-datalist-title">Run the program</div>
+          <!-- prettier-ignore -->
+          <div class="v-datalist-row code">
+>>> f = lambda x : x*2
+>>> a = int(input("Enter a number: "))
+<input type="text" id="number-input">
+>>> print(f(a))
+          </div>
+          <div class="v-button" id="sub" onclick="animation()">Submit</div>
+          <div class="v-datalist-row v-bold" style="text-align: start;">Output is: <div id="output"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="columns is-centered is-flex-direction-row ">
+      <div class="column is-4-desktop is-12-tablet is-12-mobile">
+        <div class="v-datalist-container">
+          <div class="v-datalist-title">Observations</div>
+          <div class="v-datalist-row obs-container">
+            <div class="lambda" id="lambda">x*2</div>
+            <div class="operand" id="operand">1</div>
+            <!-- <div style="flex: 1;"></div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
