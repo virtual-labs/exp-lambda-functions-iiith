@@ -5,19 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Lambda Functions</title>
-    <link rel="stylesheet" href="./css/main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
       rel="stylesheet"
-    />
+      />
 
     <link
-      rel="stylesheet"
+    rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
     />
     <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <div class="container">
@@ -56,17 +56,24 @@
           <div class="v-datalist-title">Run the program</div>
           <!-- prettier-ignore -->
           <div class="v-datalist-row code">
->>> f = lambda x : x*2
+>>> f = lambda x : <select name="operation" id="operation" onchange="changeOperation()">
+  <option value="x*2" selected="selected">x*2</option>
+  <option value="x**2">x**2</option>
+  <option value="x.upper()">x.upper()</option>
+</select>
 >>> a = int(input("Enter a number: "))
 <input type="text" id="number-input">
 >>> print(f(a))
           </div>
           <div class="v-button" id="sub" onclick="animation()">Submit</div>
-          <div class="v-datalist-row v-bold" style="text-align: start;">Output is: <div id="output"></div></div>
+          <div class="v-datalist-row v-bold" style="text-align: start">
+            Output is:
+            <div id="output"></div>
+          </div>
         </div>
       </div>
     </div>
-    <div class="columns is-centered is-flex-direction-row ">
+    <div class="columns is-centered is-flex-direction-row">
       <div class="column is-4-desktop is-12-tablet is-12-mobile">
         <div class="v-datalist-container">
           <div class="v-datalist-title">Observations</div>
