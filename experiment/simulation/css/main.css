@@ -6,17 +6,11 @@
 }
 
 .operand {
-  /* min-width: 2rem;
-  min-height: 2rem; */
   padding: 0.5rem 1rem;
   border-radius: 50%;
   background-color: aqua;
-  /* display: inline-block; */
   float: left;
-  /* float: left; */
   margin: 0.5rem 0 0.5rem 1rem;
-  /* position: relative;
-  left: 0px; */
 }
 
 .lambda {
@@ -53,6 +47,8 @@ option {
   cursor: move;
   translate: 0 4px;
   font-size: small;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .options {
@@ -72,6 +68,8 @@ option {
   background-color: #ddd;
   border-radius: 10%;
   cursor: move;
+  -ms-touch-action: none;
+  touch-action: none;
 }
 
 .correct {
@@ -87,4 +85,16 @@ option {
 .correct {
   font-size: large;
   font-weight: 900;
+}
+
+.drop-active {
+  border-style: dashed;
+}
+
+.drop-target {
+  background-color: #ccc;
+}
+
+.can-drop {
+  opacity: 0.5;
 }
