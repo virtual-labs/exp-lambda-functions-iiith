@@ -80,6 +80,14 @@ async function animation() {
 function changeOperation() {
   let op = document.getElementById("operation").value;
   let ele = document.getElementById("lambda");
+  let x = document.getElementById("number-or-string");
+  if(op == "x*2"){
+    x.innerHTML = "number or string";
+  }else if(op == "x**2"){
+    x.innerHTML = "number";
+  }else{
+    x.innerHTML = "string";
+  }
   ele.innerHTML = op;
 }
 
