@@ -136,21 +136,18 @@
             </div>
           </div>
         </div>
-        <div class="column is-5-desktop is-12-tablet is-12-mobile">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
           <div class="v-datalist-container">
             <div class="v-datalist-title">Complete the program</div>
             <!-- prettier-ignore -->
-            <div class="v-datalist-row code">
-from functools import reduce
+            <div class="v-datalist-row code">from functools import reduce
 
 numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 squares = list(map(<div class="blank drag" draggable="true"></div>, numbers))
 filtered = list(filter(<div class="blank drag" draggable="true"></div>, squares))
 sum = reduce(<div class="blank drag" draggable="true"></div>, filtered)
-              
-print(squares, filtered, sum, sep='\n')
-              
-            </div>
+
+print(squares, filtered, sum, sep='\n')</div>
             <div class="v-datalist-row options">
               <div class="option drag" draggable="true">lambda x : x*x</div>
               <div class="option drag" draggable="true">lambda x : x%2</div>
@@ -159,14 +156,25 @@ print(squares, filtered, sum, sep='\n')
               <div class="option drag" draggable="true">lambda x : x+x</div>
               <div class="option drag" draggable="true">lambda x,y : x*y</div>
             </div>
-            <button
-              class="v-button"
-              style="margin-bottom: 1rem"
-              onclick="handleSubmit()"
-            >
-              Submit
-            </button>
-            <div class="v-datalist-row hidden correct">Correct Answer! View the same application without using lambda functions below.</div>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 0.3rem"
+                onclick="handleSubmit()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswer()"
+              >
+                Reveal Answer
+              </button>
+            </div>
+            <div class="v-datalist-row hidden correct">
+              Correct Answer!
+            </div>
             <div class="v-datalist-row hidden wrong">Wrong Answer :(</div>
             <div class="v-datalist-row hidden all">Fill all the blanks.</div>
           </div>
@@ -178,20 +186,20 @@ print(squares, filtered, sum, sep='\n')
             <div class="v-datalist-title">
               The same application without lambda functions
             </div>
-            <div class="v-datalist-row code" id="complete">Complete the experiment first!</div>
-            <!-- prettier-ignore -->
-            <div class="v-datalist-row code hidden" id="answer">
-        squares = []
-        for number in numbers:
-          squares.append(number*number)
-        filtered = []
-        for number in squares:
-          if not number % 2:
-            filtered.append(number)
-        sum = 0
-        for number in filtered:
-          sum += number
+            <div class="v-datalist-row code" id="complete">
+Complete the experiment first!
             </div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code hidden" id="answer">squares = []
+for number in numbers:
+  squares.append(number*number)
+filtered = []
+for number in squares:
+  if not number % 2:
+    filtered.append(number)
+sum = 0
+for number in filtered:
+  sum += number</div>
           </div>
         </div>
       </div>

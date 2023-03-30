@@ -129,6 +129,26 @@ function changeTabs(e) {
   document.getElementById(task).classList.add("is-active");
 }
 
+function revealAnswer() {
+  let options = [...document.getElementsByClassName('option')];
+  let blanks = [...document.getElementsByClassName("blank")];
+  
+  for(let i = 0; i < options.length; i++) {
+    if(options[i].innerHTML == "lambda x : x*x"){
+      blanks[0].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "lambda x : not x%2"){
+      blanks[1].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+    if(options[i].innerHTML == "lambda x,y : x+y"){
+      blanks[2].innerHTML = options[i].innerHTML;
+      options[i].innerHTML = "";
+    }
+  }
+}
+
 function dragMoveListener(event) {
   var target = event.target;
   var x = (parseFloat(target.getAttribute("data-x")) || 0) + event.dx;
