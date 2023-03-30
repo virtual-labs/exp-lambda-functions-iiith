@@ -76,7 +76,11 @@
   <option value="x**2">x**2</option>
   <option value="x.upper()">x.upper()</option>
 </select>
->>> a = int(input("Enter a <div style="display: inline;" id="number-or-string">number or string</div>: "))
+>>> a = input("Enter a <div style="display: inline;" id="number-or-string">number or string</div>: ")
+>>> try:
+        a = int(a)
+    except:
+        pass
 <input type="text" id="number-input">
 >>> print(f(a))
           </div>
