@@ -1,17 +1,7 @@
 {
   "version": 2.0,
   "questions": [
-    {
-      "question": "What is a lambda function?",
-      "answers": {
-        "a": "A function with a name",
-        "b": "A function without a name",
-        "c": "A built in python function",
-        "d": "A recursive function"
-      },
-      "correctAnswer": "b",
-      "difficulty": "Beginner"
-    },
+    
     {
       "question": "Which keyword is used to define a lambda function?",
       "answers": {
@@ -78,17 +68,7 @@
       "correctAnswer": "b",
       "difficulty": "Intermediate"
     },
-    {
-      "question": " Which Python module is used to use the reduce function? ",
-      "answers": {
-        "a": "functools",
-        "b": "itertools",
-        "c": "math",
-        "d": "random"
-      },
-      "correctAnswer": "a",
-      "difficulty": "Intermediate"
-    },
+    
     {
       "question": " Which of the following is a correct example of using the map function with a lambda function to double each element of a list? ",
       "answers": {
@@ -100,17 +80,7 @@
       "correctAnswer": "d",
       "difficulty": "Intermediate"
     },
-    {
-      "question": "what will be the output of the following code: \nimport functools\nlist_of_numbers = [1, 2, 3, 4]\nresult = functools.reduce(lambda x, y: x*y, list_of_numbers)\nprint(result) ",
-      "answers": {
-        "a": "10",
-        "b": "24",
-        "c": "12",
-        "d": "Error"
-      },
-      "correctAnswer": "b",
-      "difficulty": "Advanced"
-    },
+    
     {
       "question": "what would be the output of the following code?\nvegetables = ['brinjal', 'potato', 'tomato', 'palak', 'methi']\nfiltered_veg = list(filter(lambda x: 't' in x, vegetables))\nprint(filtered_veg) ",
       "answers": {

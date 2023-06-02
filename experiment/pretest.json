@@ -12,17 +12,7 @@
       "correctAnswer": "d",
       "difficulty": "Beginner"
     },
-    {
-      "question": "Lambda functions is used along with higher order functions",
-      "answers": {
-        "a": "True",
-        "b": "false",
-        "c": "maybe",
-        "d": "None of the above"
-      },
-      "correctAnswer": "a",
-      "difficulty": "Beginner"
-    },
+    
     {
       "question": "Lambda functions can be used to control the behaviour of higher order functions",
       "answers": {
@@ -56,17 +46,7 @@
       "correctAnswer": "c",
       "difficulty": "Beginner"
     },
-    {
-      "question": "What  would be the output of the following code?\nresult_1 = (lambda x: x**2)(4)\nprint(result_1)",
-      "answers": {
-        "a": "4",
-        "b": "16",
-        "c": "18",
-        "d": "Error"
-      },
-      "correctAnswer": "b",
-      "difficulty": "Intermediate"
-    },
+    
     {
       "question": "What would be the output of the following code:\nnumbers_1 = [1,2,3,4,5]\nresult = list(filter(lambda x: x % 2 == 0, numbers_1))\nprint(result)",
       "answers": {
