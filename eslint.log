@@ -1,0 +1,13 @@
+
+/home/runner/work/exp-lambda-functions-iiith/exp-lambda-functions-iiith/experiment/simulation/js/main.js
+   32:3   warning  'anime' is not defined                       no-undef
+   43:10  warning  Unexpected constant condition                no-constant-condition
+   80:10  warning  'changeOperation' is defined but never used  no-unused-vars
+   94:10  warning  'handleSubmit' is defined but never used     no-unused-vars
+  124:10  warning  'changeTabs' is defined but never used       no-unused-vars
+  140:10  warning  'revealAnswer' is defined but never used     no-unused-vars
+  170:1   warning  'interact' is not defined                    no-undef
+  182:1   warning  'interact' is not defined                    no-undef
+
+✖ 8 problems (0 errors, 8 warnings)
+

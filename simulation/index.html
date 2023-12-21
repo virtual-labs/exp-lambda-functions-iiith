@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lambda Functions</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Mono&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/virtual-labs/virtual-style@0.0.8-b/css/style.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.0.1/lib/anime.min.js"></script>
+    <link rel="stylesheet" href="./css/main.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column">
+          <div class="v-tabs">
+            <ul>
+              <li class="is-active" id="learn" onclick="changeTabs(event)">
+                <a> Learn </a>
+              </li>
+              <li id="practice" onclick="changeTabs(event)">
+                <a> Practice </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="learn">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Let's Learn Lambda Functions!</div>
+            <div class="v-datalist-row">
+              Lambda functions are small anonymous functions. A lambda function
+              can take any number of arguments, but can only have one
+              expression. They are used for simple tasks that can be done in a
+              single line. Their major use is inside map, filter and reduce
+              functions which take a callback function as an argument and
+              defining a function and naming it makes code more complicated.
+            </div>
+            <div class="v-datalist-row v-bold">
+              In this simulation, you are going to learn the use of lambda
+              functions and why they should be used over a normal function
+              definition.
+            </div>
+            <div class="v-datalist-row v-bold">
+              You are given a program which illustrates the use of a lambda
+              function. You are required to give it input and observe the
+              output.
+            </div>
+          </div>
+        </div>
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Run the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">
+>>> f = lambda x : <select name="operation" id="operation" onchange="changeOperation()">
+  <option value="x*2" selected="selected">x*2</option>
+  <option value="x**2">x**2</option>
+  <option value="x.upper()">x.upper()</option>
+</select>
+>>> a = input("Enter a <div style="display: inline;" id="number-or-string">number or string</div>: ")<br>
+Enter a number or string: <input type="text" id="number-input"><br>
+>>> try:
+        a = int(a)
+    except:
+        pass
+>>> print(f(a))
+          </div>
+            <div class="v-button" id="sub" onclick="animation()">Submit</div>
+            <div class="v-datalist-row v-bold" style="text-align: start">
+              Output is:
+              <div id="output"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Observations</div>
+            <div class="v-datalist-row obs-container">
+              <div class="lambda" id="lambda">x*2</div>
+              <div class="operand" id="operand">1</div>
+              <!-- <div style="flex: 1;"></div> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="practice hidden">
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">Applications of Lambda Functions</div>
+            <div class="v-datalist-row">
+              Drag and drop the options to the blanks to complete the program to
+              perform a task using map, filter and reduce functions with lambda
+              functions as parameters.
+            </div>
+            <div class="v-datalist-row v-bold">
+              The goal of this function will be to take a list of numbers and
+              use the map, filter and reduce functions to return the sum of all
+              even squares of the numbers in the list.
+            </div>
+            <div
+              class="v-datalist-row"
+              style="
+                font-family: 'Fira Mono', 'monospace';
+                font-size: medium;
+                line-height: 40px;
+              "
+            >
+              Input = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+              <br />
+              Output:
+              <br />
+              [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+              <br />
+              [4, 16, 36, 64, 100]
+              <br />
+              220
+            </div>
+          </div>
+        </div>
+        <div class="column is-4-desktop is-12-tablet is-12-mobile">
+          <div class="v-datalist-container">
+            <div class="v-datalist-title">Complete the program</div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code">numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+squares = list(map(<div class="blank drag" draggable="true"></div>, numbers))
+filtered = list(filter(<div class="blank drag" draggable="true"></div>, squares))
+sum = reduce(<div class="blank drag" draggable="true"></div>, filtered)
+
+print(squares, filtered, sum, sep='\n')</div>
+            <div class="v-datalist-row options">
+              <div class="option drag" draggable="true">lambda x : x*x</div>
+              <div class="option drag" draggable="true">lambda x : x%2</div>
+              <div class="option drag" draggable="true">lambda x : not x%2</div>
+              <div class="option drag" draggable="true">lambda x,y : x+y</div>
+              <div class="option drag" draggable="true">lambda x : x+x</div>
+              <div class="option drag" draggable="true">lambda x,y : x*y</div>
+            </div>
+            <div class="v-datalist-row">
+              <button
+                class="v-button"
+                style="margin-bottom: 0.3rem"
+                onclick="handleSubmit()"
+              >
+                Submit
+              </button>
+              <button
+                class="v-button"
+                style="margin-left: 1rem"
+                onclick="revealAnswer()"
+              >
+                Reveal Answer
+              </button>
+            </div>
+            <div class="v-datalist-row hidden correct">
+              Correct Answer!
+            </div>
+            <div class="v-datalist-row hidden wrong">Wrong Answer :(</div>
+            <div class="v-datalist-row hidden all">Fill all the blanks.</div>
+          </div>
+        </div>
+      </div>
+      <div class="columns is-centered is-flex-direction-row is-flex-wrap-wrap">
+        <div class="column is-4-desktop is-12-mobile is-12-tablet">
+          <div class="v-datalist-container" style="height: 100%">
+            <div class="v-datalist-title">
+              The same application without lambda functions
+            </div>
+            <div class="v-datalist-row code" id="complete">
+Complete the experiment first!
+            </div>
+            <!-- prettier-ignore -->
+            <div class="v-datalist-row code hidden" id="answer">squares = []
+for number in numbers:
+  squares.append(number*number)
+filtered = []
+for number in squares:
+  if not number % 2:
+    filtered.append(number)
+sum = 0
+for number in filtered:
+  sum += number</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/main.js"></script>
+  <script src="../assets/js/iframeResize.js"></script></body>
+</html>
