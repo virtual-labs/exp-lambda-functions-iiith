@@ -2,38 +2,127 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which is true about lambda functions?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Lambda function has no return value",
+        "b": "Lambda function consists of no name",
+        "c": "Lambda function can be written only in one line",
+        "d": "All of the above"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "Lambda functions can be used to control the behaviour of higher order functions",
+      "answers": {
+        "a": "Agree ",
+        "b": " Disagree",
+        "c": "Neither Agree Nor Disagree",
+        "d": "None of the above"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which of the following function allows you to apply a condition and based on that condition, you obtain the output?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "map",
+        "b": "reduce",
+        "c": "filter",
+        "d": "none of the above"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "which of the following function allows you to perform an operation on every item present in the list?",
+      "answers": {
+        "a": "filter",
+        "b": "reduce",
+        "c": "map",
+        "d": "All of the above"
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    
+    {
+      "question": "What would be the output of the following code:\nnumbers_1 = [1,2,3,4,5]\nresult = list(filter(lambda x: x % 2 == 0, numbers_1))\nprint(result)",
+      "answers": {
+        "a": "[1, 3, 5]",
+        "b": "[2, 4]",
+        "c": "[1, 2, 3, 4, 5]",
+        "d": "Error"
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code?\nfrom functools import reduce\nnumbers_1 = [1,2,3,4,5]\nresult = reduce(lambda x, y: x*y, numbers_1)\nprint(result)",
+      "answers": {
+        "a": "15",
+        "b": "720",
+        "c": "120",
+        "d": "Error"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code?\nnumbers_1 = [1,2,3,4,5]\nresult = reduce(lambda x, y: x+y, filter(lambda x: x % 2 == 0, numbers_1))\nprint(result)",
+      "answers": {
+        "a": "6",
+        "b": "8",
+        "c": "10",
+        "d": "Error"
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code?\nwords_list = [\"apple\", \"banana\", \"cherry\"]\nresult = list(map(lambda x: len(x), words_list))\nprint(result)",
+      "answers": {
+        "a": "[5, 6, 7]",
+        "b": "[6, 6, 7]",
+        "c": "[5, 6, 6]",
+        "d": "Error"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What is the output of the following code?\nnums_1 = [2,4,6,8]\nresult = map(lambda x: x * 2, nums_1)\nprint(list(result))",
+      "answers": {
+        "a": "[4, 8, 12, 16]",
+        "b": "[2, 4, 6, 8, 2, 4, 6, 8]",
+        "c": "[1, 2, 3, 4, 5, 6, 7, 8]",
+        "d": "[0,0,0,0]"
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the output of the following code?\nwords_list = ['hello', 'world', 'how', 'are', 'you']\nresult = filter(lambda x: len(x) > 3, words_list)\nresult = map(lambda x: x.upper(), result)\nprint(list(result))",
+      "answers": {
+        "a": "['HELLO', 'WORLD', 'YOU']",
+        "b": "['hello', 'world', 'how', 'are', 'you']",
+        "c": "['HELLO', 'WORLD']",
+        "d": "['how']"
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What is the output of the following code?\nprog_lang = ['Python', 'Java', 'JavaScript', 'C++', 'Ruby']\nresult = filter(lambda x: len(x) > 4, prog_lang)\nresult = map(lambda x: x.lower(), result)\nprint(list(result))",
+      "answers": {
+        "a": "['python', 'java', 'javascript', 'ruby']",
+        "b": "['Python', 'Java', 'JavaScript', 'C++', 'Ruby']",
+        "c": "['python', 'javascript']",
+        "d": "['C++', 'Ruby']"
+      },
+      "correctAnswer": "c",
+      "difficulty": "advanced"
     }
   ]
 }

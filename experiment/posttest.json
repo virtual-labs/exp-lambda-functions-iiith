@@ -1,39 +1,118 @@
 {
   "version": 2.0,
   "questions": [
+    
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Which keyword is used to define a lambda function?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "lambda input:output",
+        "b": "input:lambda output",
+        "c": "def input output",
+        "d": "output:lambda input"
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which Python function is used to apply a lambda function to every element of an iterable?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
-      },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "apply()",
+        "b": "call()",
+        "c": "map()",
+        "d": "reduce()"
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "What is the purpose of filter function in python?",
+      "answers": {
+        "a": "To apply a condition to an iterable and get a filtered output",
+        "b": "To remove duplicates from a iterable ",
+        "c": "To sort an iterable in ascending order",
+        "d": "To reverse the elements the elements of an iterable"
+      },
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following is a correct example of a lambda function that takes two input parameters and returns their sum?",
+      "answers": {
+        "a": "lambda x,y:x*y",
+        "b": " lambda x,y:x-y ",
+        "c": " lambda x,y:x**y ",
+        "d": "None of the above"
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": " Which Python function is used to apply a condition to an iterable and get a filtered output? ",
+      "answers": {
+        "a": "map()",
+        "b": "reduce()",
+        "c": "filter()",
+        "d": "apply()"
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": " What is the output of the following lambda function?\nlambda x: x.upper() ",
+      "answers": {
+        "a": " Converts a string to lowercase ",
+        "b": " Converts a string to uppercase ",
+        "c": " Removes whitespace characters from a string ",
+        "d": " Converts a string to title case "
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    
+    {
+      "question": " Which of the following is a correct example of using the map function with a lambda function to double each element of a list? ",
+      "answers": {
+        "a": " map(lambda x: x/2, [1, 2, 3, 4]) ",
+        "b": " map(lambda x: x**2, [1, 2, 3, 4]) ",
+        "c": " map(lambda x: x+2, [1, 2, 3, 4]) ",
+        "d": " map(lambda x: x*2, [1, 2, 3, 4]) "
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
+    },
+    
+    {
+      "question": "what would be the output of the following code?\nvegetables = ['brinjal', 'potato', 'tomato', 'palak', 'methi']\nfiltered_veg = list(filter(lambda x: 't' in x, vegetables))\nprint(filtered_veg) ",
+      "answers": {
+        "a": " ['tomato'] ",
+        "b": " ['brinjal', 'potato', 'palak', 'methi'] ",
+        "c": " ['palak'] ",
+        "d": "['potato', 'tomato', 'methi'] "
+      },
+      "correctAnswer": "d",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "What would be the output of the following code?\nmy_list = [1 ,2 ,3 ,4]\nresult = list(map(lambda x: x**2 if x%2==0 else x, my_list))\nprint(result) ",
+      "answers": {
+        "a": " [1, 4, 3, 16] ",
+        "b": " [1, 4, 9, 16] ",
+        "c": "[2, 4, 6, 8] ",
+        "d": "[1, 2, 3, 4]"
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "what is the output of the following code?\nnames = ['Alice', 'Bob', 'Charlie', 'Dave', 'Eve']\nreversed_names = list(map(lambda x: x[::-1], names))\nprint(reversed_names)",
+      "answers": {
+        "a": "['ecilA', 'boB', 'eilrahC', 'evaD', 'evE']",
+        "b": "['Eve', 'Dave', 'Charlie', 'Bob', 'Alice']",
+        "c": "['A', 'B', 'C', 'D', 'E']",
+        "d": "None of the above"
+      },
+      "correctAnswer": "a",
+      "difficulty": "advanced"
     }
   ]
 }

@@ -1,1 +1,100 @@
-/* You CSS goes in here */
+.code {
+  font-family: "Fira Mono", "monospace";
+  white-space: pre-wrap;
+  text-align: start;
+  /* padding-left: 10%; */
+}
+
+.operand {
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  background-color: aqua;
+  float: left;
+  margin: 0.5rem 0 0.5rem 1rem;
+}
+
+.lambda {
+  margin-top: 0.5rem;
+  min-width: 2rem;
+  min-height: 2rem;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  border: 1px solid black;
+  display: inline;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+option {
+  font-family: "Fira Mono", "monospace";
+  background-color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.blank {
+  display: inline-block;
+  border: 3px solid darkgray;
+  border-radius: 10%;
+  background-color: #ddd;
+  min-width: 60px;
+  min-height: 1.75rem;
+  font-size: large;
+  cursor: move;
+  translate: 0 4px;
+  font-size: small;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.option {
+  min-width: 60px;
+  min-height: 19px;
+  padding: 0.3% 1%;
+  font-size: large;
+  font-family: "Fira Mono", monospace;
+  display: inline-block;
+  border: 3px solid darkgray;
+  margin: 1%;
+  background-color: #ddd;
+  border-radius: 10%;
+  cursor: move;
+  -ms-touch-action: none;
+  touch-action: none;
+}
+
+.correct {
+  color: green;
+}
+
+.wrong {
+  color: red;
+}
+
+.all,
+.wrong,
+.correct {
+  font-size: large;
+  font-weight: 900;
+}
+
+.drop-active {
+  border-style: dashed;
+}
+
+.drop-target {
+  background-color: #ccc;
+}
+
+.can-drop {
+  opacity: 0.5;
+}
